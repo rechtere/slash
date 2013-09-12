@@ -31,4 +31,4 @@ if __name__ == '__main__':
     if not _PYPY:
         _execute("pylint --rcfile=.pylintrc setup.py")
         _execute("pylint --rcfile=.pylintrc slash")
-    _execute("coverage run nosetests -w tests")
+    _execute("coverage run $(which nosetests) -w tests")
